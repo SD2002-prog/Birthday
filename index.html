@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Madamji🩷</title>
+
+<style>
+
+body{
+margin:0;
+font-family:'Helvetica';
+background:linear-gradient(135deg,#ffd6e7,#ffe9f3);
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:40px 20px;
+}
+
+h1{
+font-size:34px;
+color:#ff2e63;
+margin-bottom:10px;
+}
+
+.message{
+font-size:18px;
+color:#444;
+}
+
+.cake{
+font-size:100px;
+margin-top:20px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+
+button{
+
+margin-top:30px;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff4d6d;
+color:white;
+box-shadow:0 6px 12px rgba(0,0,0,0.2);
+
+}
+
+button:active{
+transform:scale(0.95);
+}
+
+.hidden{
+display:none;
+}
+
+.final{
+margin-top:30px;
+font-size:20px;
+color:#ff0066;
+padding:10px;
+}
+
+.hearts{
+position:fixed;
+bottom:-20px;
+font-size:24px;
+animation:float 6s linear infinite;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+<source src="muz.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+
+<div class="cake">🎂</div>
+
+<h1>Happy Birthday Lakshmi ji🎀</h1>
+
+<div class="message">
+On a Thursday, a pretty lil baby was born and till date the same pretty baby is making her parents proud
+</div>
+
+<button onclick="showSurprise()">Tap for Surprise 🎁</button>
+
+<div id="wish" class="hidden final">
+
+✨ You make the world brighter just by existing ✨
+
+<br><br>
+
+I believe in you, you will reach the pinnacle soon and prove yourself. We know each other from a pretty short time, but your impact in my life is really big, such a sweet person you're 💌.
+
+<br><br>
+
+🩷 Happy Birthday to the most wonderful girl, Miss. SaiGeeta 🧿
+ଜୟ ଜଗନ୍ନାଥ, ହରି ଓଁ।
+
+</div>
+
+</div>
+
+<script>
+
+function showSurprise(){
+
+document.getElementById("wish").classList.remove("hidden");
+
+document.getElementById("music").play();
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💕";
+
+heart.className="hearts";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
